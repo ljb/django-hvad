@@ -17,7 +17,6 @@ from django.shortcuts import render
 from django.template import TemplateDoesNotExist
 from django.template.loader import select_template
 from django.utils.encoding import iri_to_uri, force_text
-from django.utils.functional import curry
 from django.utils.translation import ugettext_lazy as _, get_language, get_language_info
 from hvad.compat import urlencode, urlparse
 from hvad.forms import TranslatableModelForm, translatable_inlineformset_factory, translatable_modelform_factory
@@ -32,6 +31,10 @@ __all__ = (
     'TranslatableTabularInline',
     'InlineModelForm',
 )
+
+
+def curry(func, *a, **kw):
+    return partial(func, *a, **kw)
 
 
 class InlineModelForm(TranslatableModelForm):

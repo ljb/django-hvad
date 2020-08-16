@@ -1,5 +1,5 @@
 import django
-from django.db.models.fields import FieldDoesNotExist
+from django.core.exceptions import FieldDoesNotExist
 from django.utils.translation import get_language
 from hvad.exceptions import WrongManager
 

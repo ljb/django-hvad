@@ -1,5 +1,6 @@
 import django
-from django.db.models import Q, FieldDoesNotExist
+from django.core.exceptions import FieldDoesNotExist
+from django.db.models import Q
 from django.db.models.expressions import Expression, Col
 from django.db.models.sql.where import AND
 from collections import namedtuple
